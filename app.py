@@ -42,6 +42,6 @@ def generate(len=10, special="y"):
             password += random.choice(string.digits)
         elif choice == "special":
             password += random.choice(["{","}","[","]","(",")","/","'","`","~"","",",";",":",".","<",">"])
-        obj = {"password":password, "generated_time": datetime.datetime.now()}
+        obj = {"password":password, "generated_time": datetime.datetime.now(), "length":10, "hasSpecialChar": special}
     return obj
 
